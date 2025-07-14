@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Suspense } from 'react';
+import { Suspense, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import Loading from '@/components/Loading';
@@ -13,6 +13,19 @@ import HeroImage from './_components/HeroImage';
 export default function HeroSection() {
   // intersection observer to handle navbar change background
   const { ref, inView } = useInView({ threshold: 0.3 });
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const openDialog = () => {
+    if (dialogRef.current) {
+      dialogRef.current.showModal();
+    }
+  };
+
+  const closeDialog = () => {
+    if (dialogRef.current) {
+      dialogRef.current.close();
+    }
+  };
 
   return (
     <>
@@ -29,14 +42,49 @@ export default function HeroSection() {
             {/* <TimeCard /> */}
           </Suspense>
 
-          <Link href="/registration">
-            <button
-              className="btn btn-primary btn-large btn-register"
-              type="submit"
-            >
-              Register Now
-            </button>
-          </Link>
+          <button
+            className="btn btn-primary btn-large btn-register"
+            type="button"
+            onClick={openDialog}
+          >
+            Register Now
+          </button>
+          <dialog ref={dialogRef} className="register-dialog">
+            <div className="dialog-content">
+               <div className="event-info-item entry-fee on-popup">
+                <div className="label">Team Fee</div>
+                  <div className="fee-container">
+                    <div className="fee1">
+                      <div className="category">ULTRA</div>
+                      <div className="fee">$320</div>
+                    </div>
+                    <div className="fee2">
+                      <div className="category">MASTER</div>
+                      <div className="fee">$450 <span className="slash">/</span>$550</div>
+                      <div className="sizing">
+                        <div>&lt;= 12</div>
+                        <div>&gt; 12</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="payment-info">
+                <div className="payment-info-container">
+                  <div>1. eTransfer team fee to <b><a href="mailto:8hourrelay@gmail.com" target="_blank">8hourrelay@gmail.com</a></b></div>
+                  <div> 2. Fills out the <b><a href="https://forms.gle/R8fLWbHsg1WCK7Sg9" target="_blank">Team Registration Form</a></b></div>
+                  <div>3. Team member fills out the <b><a href="https://forms.gle/Ngbmw71hi3x8cqqBA" target="_blank">Team Member Registration Form</a></b></div>
+                </div>
+                 <button
+                  className="btn btn-secondary btn-close"
+                  type="button"
+                  onClick={closeDialog}
+                >
+                 X close
+                </button>
+                </div>
+               
+            </div>
+          </dialog>
         </div>
       </div>
       {!inView && (
