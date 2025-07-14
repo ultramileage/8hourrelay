@@ -9,8 +9,8 @@ const navigation = [
   { name: 'RULES', href: '/#rules' },
   // { name: 'Volunteering', href: '/#volunteering' },
   // { name: 'Sponsorship', href: '/#sponsorship' },
-  { name: 'Registration', href: '/registration' },
-  { name: 'teams', href: '/teams' },
+  //{ name: 'Registration', href: '/registration' },
+  //{ name: 'teams', href: '/teams' },
 ];
 
 const Navbar = ({ changeBg }: { changeBg: boolean }) => {
