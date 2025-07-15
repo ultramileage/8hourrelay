@@ -37,6 +37,21 @@ export default function RulesSection() {
             </li>
             <li>
               <details>
+                <summary>Awards</summary>
+                 <div>
+                  Two Champion Awards will be presented: one for the team that
+                  achieves the longest distance and another for the team with the
+                  highest weighted distance.
+                </div>
+                <div>
+                  In addition, awards will be given to the next n teams based
+                  on the weighted distance. The value of n will be 1 if 4 ≤ teams ≤ 7,
+                  2 if teams &gt; 7.
+                </div>
+             </details>
+            </li>
+            <li>
+              <details>
                 <summary>Result Calculation</summary>
                 <div>
                   Total Distance: The team's accumulated distance is calculated
@@ -557,6 +572,16 @@ export default function RulesSection() {
                 <div>
                   The team that achieves the greatest total weighted distance
                   within the 8-hour timeframe will be declared the winner.
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Adwards</summary>
+                <div>
+                  Awards will be presented to the top n teams with the longest
+                  weighted distance. The value of n will be 1 if teams ≤ 3,
+                  2 if 4 ≤ teams ≤ 7, and 3 if teams &gt; 7.
                 </div>
               </details>
             </li>

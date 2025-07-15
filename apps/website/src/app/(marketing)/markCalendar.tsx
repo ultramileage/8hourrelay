@@ -35,7 +35,6 @@ export default function MarkCalendarSection() {
         <div className="event-info-item">
           <div className="label">Where</div>
           <div className="value">
-            <br />
             Swangard Stadium
             <br />
             Burnaby, British Columbia
@@ -44,7 +43,7 @@ export default function MarkCalendarSection() {
         </div>
         <div className="event-info-item">
           <div className="label">Registration Deadline</div>
-          <div className="value">Sep. 07, 2025</div>
+          <div className="value">Sep. 05, 2025</div>
         </div>
       </section>
     </section>
