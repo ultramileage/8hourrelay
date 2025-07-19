@@ -37,14 +37,14 @@ export default function RulesSection() {
             </li>
             <li>
               <details>
-                <summary>Adwards</summary>
+                <summary>Awards</summary>
                  <div>
-                  Two Champion Adwards will be presented: one for the team that
+                  Two Champion Awards will be presented: one for the team that
                   achieves the longest distance and another for the team with the
                   highest weighted distance.
                 </div>
                 <div>
-                  In addition, adwards will be given to the next n teams based
+                  In addition, awards will be given to the next n teams based
                   on the weighted distance. The value of n will be 1 if 4 ≤ teams ≤ 7,
                   2 if teams &gt; 7.
                 </div>
@@ -577,9 +577,9 @@ export default function RulesSection() {
             </li>
             <li>
               <details>
-                <summary>Adwards</summary>
+                <summary>Awards</summary>
                 <div>
-                  Adwards will be presented to the top n teams with the longest
+                  Awards will be presented to the top n teams with the longest
                   weighted distance. The value of n will be 1 if teams ≤ 3,
                   2 if 4 ≤ teams ≤ 7, and 3 if teams &gt; 7.
                 </div>
